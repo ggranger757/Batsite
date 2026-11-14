@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Session — Bat Boulandi</title>
+<meta name="description" content="Book a photo shoot, art lesson or paint &amp; sip with Bat Boulandi in Takoma Park, Maryland.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="wrap header">
+  <a href="index.html" class="logo">BAT BOULANDI</a>
+  <nav class="nav" aria-label="Main">
+    <a href="photography.html" class="navlink">Photography</a><a href="art.html" class="navlink">My Art</a><a href="classes.html" class="navlink">Classes</a><a href="clothing.html" class="navlink">Shop Clothing</a>
+    <a href="book.html" class="btn btn-dark btn-sm">Book now</a>
+  </nav>
+</header>
+<main>
+<section class="wrap book">
+  <div class="book-intro">
+    <p class="eyebrow">By appointment</p>
+    <h1 class="h-page">Book a<br>session<span class="dot">.</span></h1>
+    <p class="lede">Photo shoots, art lessons and paint &amp; sip are all by appointment. Tell Bat what you'd like and when you're free, and he'll reply by email to confirm.</p>
+    <ol class="steps">
+      <li><span>1</span>Pick what you'd like to book</li>
+      <li><span>2</span>Share your availability</li>
+      <li><span>3</span>Bat emails you to confirm</li>
+    </ol>
+  </div>
+
+  <div class="book-card">
+    <form id="book-form" class="form" action="https://formsubmit.co/Bat.Favitsou@gmail.com" method="POST" novalidate>
+      <input type="hidden" name="_subject" id="f-subject" value="New booking request">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://ggranger757.github.io/Batsite/book.html?sent=1">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <fieldset class="field">
+        <legend>What would you like to book? <span class="req" aria-hidden="true">*</span></legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="Service" value="Photo shoot" data-type="shoot" required><span class="choice-box"><span class="choice-t">Photo shoot</span><span class="choice-d">Portraits, events, editorial</span></span></label>
+          <label class="choice"><input type="radio" name="Service" value="Art lesson" data-type="lesson" required><span class="choice-box"><span class="choice-t">Art lesson</span><span class="choice-d">Private or small group</span></span></label>
+          <label class="choice"><input type="radio" name="Service" value="Paint &amp; sip" data-type="paint-sip" required><span class="choice-box"><span class="choice-t">Paint &amp; sip</span><span class="choice-d">Parties, teams, date nights</span></span></label>
+        </div>
+        <p class="err" data-for="Service">Choose what you'd like to book.</p>
+      </fieldset>
+
+      <div class="row">
+        <div class="field">
+          <label for="f-name">Your name <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-name" name="Name" type="text" autocomplete="name" required>
+          <p class="err" data-for="Name">Enter your name.</p>
+        </div>
+        <div class="field">
+          <label for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+          <p class="err" data-for="email">Enter an email so Bat can reply.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="f-phone">Phone <span class="opt">optional</span></label>
+          <input id="f-phone" name="Phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="field" id="group-field">
+          <label for="f-group">How many people?</label>
+          <input id="f-group" name="Group size" type="number" min="1" inputmode="numeric" placeholder="1">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="f-avail">Your availability <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="f-avail" name="Availability" rows="3" required placeholder="e.g. Saturdays in December after 2pm, or Dec 14 / Dec 21"></textarea>
+        <p class="err" data-for="Availability">Let Bat know when you're free.</p>
+      </div>
+
+      <div class="field">
+        <label for="f-msg">Anything else? <span class="opt">optional</span></label>
+        <textarea id="f-msg" name="Details" rows="4" placeholder="Occasion, location, ideas, skill level…"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-dark btn-submit" id="f-submit">Send booking request</button>
+      <p class="form-note" id="f-status" role="status" aria-live="polite">Your request goes straight to Bat's inbox.</p>
+    </form>
+
+    <div class="sent" id="book-sent" hidden tabindex="-1">
+      <span class="sent-icon"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+      <h2>Request sent.</h2>
+      <p>Thanks! Bat will email you soon to confirm your booking.</p>
+      <a href="index.html" class="btn btn-line">Back to home</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap footer-in">
+    <a href="index.html" class="logo logo-sm">BAT BOULANDI</a>
+    <span>Fashion · Art · Culture</span>
+    <span><a href="https://www.instagram.com/afro_pop/" class="ig">@afro_pop</a> · Takoma Park, Maryland</span>
+  </div>
+</footer>
+<script src="book.js"></script>
+</body>
+</html>
