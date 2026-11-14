@@ -202,7 +202,7 @@ a{color:var(--ink)}a:hover{color:var(--accent)}
 .form[hidden]{display:none}
 
 /* ---------- neon highlight ---------- */
-:root{--neon:#D4FF3A}
+:root{--neon:#D8CA59}
 ::selection{background:var(--neon);color:var(--ink)}
 .btn-dark:hover{background:var(--neon);color:var(--ink)}
 .btn-line:hover{background:var(--ink);color:var(--neon)}
